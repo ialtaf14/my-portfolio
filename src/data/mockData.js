@@ -1,8 +1,8 @@
 export const mockData = {
   personal: {
     name: 'Altaf Khan',
-    title: 'Flutter Developer',
-    tagline: 'I craft dependable apps that solve real-world problems—optimizing operations, improving user experience, and fueling growth. From concept to launch, I deliver solutions teams can rely on.',
+    title: 'AI & Data Science Skills',
+    tagline: 'I work with data to solve real-world problems—uncovering insights, building machine learning models, and supporting smarter decisions. From raw data to actionable results, I deliver solutions teams can trust.',
     email: 'altafkhan122105@gmail.com',
     phone: '+91 8053821088',
     location: 'Gurugram, India',
@@ -11,8 +11,8 @@ export const mockData = {
   },
 
   about: {
-    description: 'I am a passionate Flutter developer with over a year of hands-on experience in building scalable mobile applications. My expertise lies in creating cross-platform solutions that deliver exceptional user experiences while maintaining high performance and reliability.',
-    detailedDescription: 'Throughout my journey, I have collaborated with cross-functional teams to develop innovative mobile solutions, implemented robust architectures, and consistently delivered projects that exceed client expectations. I am committed to continuous learning and staying updated with the latest technologies in the mobile development ecosystem.',
+    description: 'I am a motivated Data Science and AI/ML aspirant with practical experience in Python, data analysis, and machine learning models, driven to solve real-world problems through data-driven solutions.',
+    detailedDescription: 'Throughout my academic and project-based journey, I have worked on data-driven projects involving data analysis, machine learning, and problem-solving using Python. I focus on applying strong fundamentals, building reliable solutions, and continuously improving my skills by staying updated with emerging tools and techniques in the data science and AI/ML ecosystem.',
     stats: [
       { value: '1+', label: 'Years Experience' },
       { value: '5+', label: 'Projects Completed' },
@@ -27,16 +27,16 @@ export const mockData = {
       {
         name: 'Languages & Frameworks',
         skills: [
-          { name: 'Flutter/Dart', level: 90 },
-          { name: 'JavaScript', level: 75 },
-          { name: 'Python', level: 70 },
-          { name: 'Java', level: 65 }
+          { name: 'Python', level: 80},
+          { name: 'SQL', level: 70 },
+          { name: 'Pandas', level: 55},
+          { name: 'NumPy', level: 65 }
         ]
       },
       {
         name: 'Technologies',
         skills: [
-          { name: 'Firebase', level: 85 },
+          { name: '', level: 85 },
           { name: 'PostgreSQL', level: 80 },
           { name: 'REST APIs', level: 90 },
           { name: 'Git', level: 85 }
@@ -62,16 +62,23 @@ export const mockData = {
       }
     ],
     additionalSkills: [
-      'Supabase', 'Postman', 'Android Studio', 'VS Code', 'Figma', 'Adobe XD', 
-      'Agile/Scrum', 'Team Leadership', 'Code Review', 'Testing', 'CI/CD'
+      'Data Analysis',
+      'Machine Learning Fundamentals',
+      'Exploratory Data Analysis (EDA)',
+      'Problem Solving',
+      'Statistics Basics',
+      'Model Evaluation',
+      'Data Cleaning',
+      'Version Control (Git)',
+      'Continuous Learning'
     ]
   },
 
   experience: {
     positions: [
       {
-        title: 'Flutter Engineer',
-        company: 'Yesita Creations',
+        title: 'Data Science Engineer',
+        company: 'Q Spider Tech',
         location: 'Gurugram, India',
         duration: 'Dec 2023 - Present',
         description: 'Leading Flutter development for innovative mobile applications focused on digitizing paper-based workflows and improving business operations.',

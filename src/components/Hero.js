@@ -28,7 +28,7 @@ const Hero = ({ data }) => {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <p className="text-accent font-medium text-sm uppercase tracking-wide">
-                  Flutter Developer
+                  ASPIRING DATA SCIENTIST
                 </p>
               </motion.div>
               

@@ -81,7 +81,7 @@ const Contact = () => {
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            I'm always open to discussing new opportunities, creative projects, or just having a chat about Flutter development.
+                            Open to Data Science & AI/ML opportunities, project collaborations, and tech discussions. Feel free to reach out!
                         </motion.p>
                     </div>
 

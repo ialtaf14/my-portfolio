@@ -38,7 +38,7 @@ const Projects = ({ data }) => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Here are some of the projects I've worked on, showcasing my skills in Flutter development.
+              These are the tools and technologies I work with for data analysis, machine learning, and Python-based projects.
             </motion.p>
           </div>
 

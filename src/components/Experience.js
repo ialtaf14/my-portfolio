@@ -38,7 +38,7 @@ const Experience = ({ data }) => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              My professional journey in Flutter development and mobile app creation.
+              Fresher with hands-on experience through projects and coursework in Data Science, AI/ML, and Python.
             </motion.p>
           </div>
 
