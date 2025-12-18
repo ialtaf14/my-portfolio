@@ -17,9 +17,10 @@ const Contact = () => {
         },
         {
             icon: Phone,
-            label: 'Phone', Altaf Khan
+            label: 'Phone',
+            name: 'Altaf Khan',
             value: '+91 8053821088',
-            href: 'tel:+918053821088'
+            href: 'tel:+918053821088'   
         },
         {
             icon: MapPin,
