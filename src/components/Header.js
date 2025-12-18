@@ -53,7 +53,7 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="cursor-pointer" onClick={() => scrollToSection('#home')}>
-              Samim
+              Altaf Khan
             </span>
           </motion.div>
 

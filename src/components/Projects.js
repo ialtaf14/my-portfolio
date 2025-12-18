@@ -176,7 +176,7 @@ const Projects = ({ data }) => {
               className="px-8 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-white transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://github.com/samim', '_blank')}
+              onClick={() => window.open('https://github.com/ialtaf14', '_blank')}
             >
               View More Projects
             </motion.button>

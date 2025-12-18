@@ -12,14 +12,14 @@ const Contact = () => {
         {
             icon: Mail,
             label: 'Email',
-            value: 'mr.samim.samim@gmail.com',
-            href: 'mailto:mr.samim.samim@gmail.com'
+            value: 'altafkhan122105@gmail.com',
+            href: 'mailto:altafkhan122105@gmail.com'
         },
         {
             icon: Phone,
-            label: 'Phone',
-            value: '+91 9053329711',
-            href: 'tel:+919053329711'
+            label: 'Phone', Altaf Khan
+            value: '+91 8053821088',
+            href: 'tel:+918053821088'
         },
         {
             icon: MapPin,
@@ -33,13 +33,13 @@ const Contact = () => {
         {
             icon: Linkedin,
             label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/mr-samim',
+            href: 'https://www.linkedin.com/in/ialtaf14/',
             color: 'hover:text-blue-600'
         },
         {
             icon: Github,
             label: 'GitHub',
-            href: 'https://github.com/samim',
+            href: 'https://github.com/ialtaf14',
             color: 'hover:text-gray-900 dark:hover:text-gray-100'
         },
         {

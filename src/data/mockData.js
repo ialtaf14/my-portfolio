@@ -1,10 +1,10 @@
 export const mockData = {
   personal: {
-    name: 'Samim',
+    name: 'Altaf Khan',
     title: 'Flutter Developer',
     tagline: 'I craft dependable apps that solve real-world problems—optimizing operations, improving user experience, and fueling growth. From concept to launch, I deliver solutions teams can rely on.',
-    email: 'mr.samim.samim@gmail.com',
-    phone: '+91 9053329711',
+    email: 'altafkhan122105@gmail.com',
+    phone: '+91 8053821088',
     location: 'Gurugram, India',
     resume: '#', // Placeholder for resume link
     profileImage: '/images/profile.jpg' // Placeholder
@@ -121,7 +121,7 @@ export const mockData = {
           'Multi-role user management'
         ],
         technologies: ['Flutter', 'Dart', 'Firebase'],
-        githubUrl: 'https://github.com/samim/motel-app',
+        githubUrl: 'https://github.com/ialtaf14/motel-app',
         liveUrl: null,
         image: '/images/motel-app.jpg'
       },
@@ -137,7 +137,7 @@ export const mockData = {
           'Image gallery and history'
         ],
         technologies: ['Flutter', 'Dart', 'LLM', 'SD 3.5'],
-        githubUrl: 'https://github.com/samim/ai-chat-app',
+        githubUrl: 'https://github.com/ialtaf14/ai-chat-app',
         liveUrl: null,
         image: '/images/ai-chat-app.jpg'
       },
@@ -153,7 +153,7 @@ export const mockData = {
           'Real-time notifications'
         ],
         technologies: ['Flutter', 'Dart', 'Supabase'],
-        githubUrl: 'https://github.com/samim/parkit-app',
+        githubUrl: 'https://github.com/ialtaf14/parkit-app',
         liveUrl: null,
         image: '/images/parkit-app.jpg'
       }

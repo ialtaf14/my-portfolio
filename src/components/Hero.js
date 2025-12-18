@@ -39,7 +39,7 @@ const Hero = ({ data }) => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 Hi, I'm{' '}
-                <span className="text-accent">Samim</span>
+                <span className="text-accent">Altaf Khan</span>
               </motion.h1>
               
               <motion.p
