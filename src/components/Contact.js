@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Facebook, X, Youtube, Twitter, Send } from 'lucide-react';
 
 const Contact = () => {
     const ref = useRef(null);
@@ -13,20 +13,23 @@ const Contact = () => {
             icon: Mail,
             label: 'Email',
             value: 'altafkhan122105@gmail.com',
-            href: 'mailto:altafkhan122105@gmail.com'
+            href: 'https://mail.google.com/mail/?view=cm&fs=1&to=altafkhan122105@gmail.com',
+            color: 'hover:text-red-500'
         },
         {
             icon: Phone,
             label: 'Phone',
             name: 'Altaf Khan',
             value: '+91 8053821088',
-            href: 'tel:+918053821088'   
+            href: 'tel:+918053821088',
+            color: 'hover:text-green-500'
         },
         {
             icon: MapPin,
             label: 'Location',
             value: 'Gurugram, India',
-            href: '#'
+            href: 'https://www.google.com/maps/search/?api=1&query=Gurugram,India',
+            color: 'hover:text-blue-500'
         }
     ];
 
@@ -44,11 +47,30 @@ const Contact = () => {
             color: 'hover:text-gray-900 dark:hover:text-gray-100'
         },
         {
-            icon: ExternalLink,
-            label: 'Portfolio',
-            href: '#home',
-            color: 'hover:text-accent'
+            icon: Instagram,
+            label: 'Instagram',
+            href: 'https://www.instagram.com/ialtaf14/',
+            color: 'hover:text-red-500'
+        },
+        {
+            icon: Facebook,
+            label: 'Facebook',
+            href: 'https://www.facebook.com/ialtaf.14',
+            color: 'hover:text-blue-600'
+        },
+        {
+            icon: Twitter,
+            label: 'X (Twitter)',
+            href: 'https://x.com/ialtaf14',
+            color: 'hover:text-black'
+        },
+        {
+            icon: Send,
+            label: 'Telegram',
+            href: 'https://t.me/ialtaf14',
+            color: 'hover:text-sky-400'
         }
+
     ];
 
     return (
@@ -101,28 +123,31 @@ const Contact = () => {
                                 <div className="space-y-6">
                                     {contactInfo.map((item, index) => {
                                         const IconComponent = item.icon;
-                                        return (
-                                            <motion.div
+                                         return (
+                                            <motion.a
                                                 key={item.label}
-                                                className="flex items-center gap-4 group cursor-pointer"
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`group flex items-center gap-4 cursor-pointer transition-colors duration-300 ${item.color}`}
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                                                whileHover={{ x: 5 }}
-                                                onClick={() => item.href !== '#' && window.open(item.href, '_blank')}
+                                                whileHover={{ x: 5 }}                                          
+                                                                            
                                             >
-                                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-200">
+                                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-current">
                                                     <IconComponent className="w-5 h-5 text-accent group-hover:text-white" />
                                                 </div>
                                                 <div>
                                                     <p className="text-sm font-medium text-foreground/60 mb-1">
                                                         {item.label}
                                                     </p>
-                                                    <p className="text-foreground font-medium group-hover:text-accent transition-colors duration-200">
+                                                    <p className="font-medium transition-colors duration-300">
                                                         {item.value}
                                                     </p>
                                                 </div>
-                                            </motion.div>
+                                            </motion.a>
                                         );
                                     })}
                                 </div>
@@ -134,36 +159,41 @@ const Contact = () => {
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 transition={{ duration: 0.6, delay: 0.8 }}
                             >
-                                <h4 className="text-lg font-semibold text-foreground mb-4">
+                                 <h4 className="text-sm uppercase tracking-widest text-foreground/60 mb-4">
                                     Follow Me
                                 </h4>
-                                <div className="flex gap-4">
+                                <div className="flex flex-wrap gap-4">
                                     {socialLinks.map((social, index) => {
                                         const IconComponent = social.icon;
                                         return (
-                                            <motion.button
+                                            <motion.a
                                                 key={social.label}
-                                                className={`w-12 h-12 bg-background border border-border rounded-lg flex items-center justify-center text-foreground/60 hover:border-accent transition-all duration-200 ${social.color}`}
-                                                whileHover={{ scale: 1.1, y: -2 }}
-                                                whileTap={{ scale: 0.95 }}
-                                                onClick={() => {
-                                                    if (social.href.startsWith('#')) {
-                                                        document.querySelector(social.href).scrollIntoView({ behavior: 'smooth' });
-                                                    } else {
-                                                        window.open(social.href, '_blank');
-                                                    }
-                                                }}
+                                                href={social.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`group flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-background transition-all duration-300 hover:border-accent hover:shadow-lg ${social.color}`}
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                 transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
+                                                whileHover={{ y: -3 }}
                                             >
-                                                <IconComponent className="w-5 h-5" />
-                                            </motion.button>
+                                                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-current">
+                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-white" />
+                                                </div>
+                                                <span className="text-sm font-medium text-foreground/70 group-hover:text-foreground transition-colors duration-300">
+                                                    {social.label}
+                                                </span>
+                                            </motion.a>
                                         );
                                     })}
                                 </div>
                             </motion.div>
                         </motion.div>
+
+
+
+
+
 
                     </div>
                 </motion.div>

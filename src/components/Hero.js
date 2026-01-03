@@ -80,15 +80,16 @@ const Hero = ({ data }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <motion.button
+              <motion.a
+                href="/cv/Altaf_Khan_CV.pdf"
+                download
                 className="btn-primary btn-elegant flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open(data.resume, '_blank')}
               >
-                <Download className="w-4 h-4" />
+               <Download className="w-4 h-4" />
                 Download CV
-              </motion.button>
+              </motion.a>
               
               <motion.button
                 className="btn-secondary btn-elegant flex items-center justify-center"
@@ -114,7 +115,12 @@ const Hero = ({ data }) => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-              <img src="https://github.com/Same-dev1/image/blob/main/profile.png?raw=true"></img>
+              <img
+                src="/images/altaf.jpg"
+                alt="Altaf Khan"
+                className="w-full h-full object-cover rounded-2xl"
+              />
+
                 
               
               </motion.div>
