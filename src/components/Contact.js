@@ -49,7 +49,7 @@ const Contact = () => {
         {
             icon: Instagram,
             label: 'Instagram',
-            href: 'https://www.instagram.com/ialtaf14/',
+            href: 'https://www.instagram.com/ialtaf.14/',
             color: 'hover:text-red-500'
         },
         {
@@ -59,8 +59,8 @@ const Contact = () => {
             color: 'hover:text-blue-600'
         },
         {
-            icon: Twitter,
-            label: 'X (Twitter)',
+            icon: X,
+            label: 'X',
             href: 'https://x.com/ialtaf14',
             color: 'hover:text-black'
         },

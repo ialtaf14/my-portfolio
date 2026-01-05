@@ -13,13 +13,15 @@ export const mockData = {
   about: {
     description: 'I am a motivated Data Science and AI/ML aspirant with practical experience in Python, data analysis, and machine learning models, driven to solve real-world problems through data-driven solutions.',
     detailedDescription: 'Throughout my academic and project-based journey, I have worked on data-driven projects involving data analysis, machine learning, and problem-solving using Python. I focus on applying strong fundamentals, building reliable solutions, and continuously improving my skills by staying updated with emerging tools and techniques in the data science and AI/ML ecosystem.',
+    image: '/images/about-ai-ds.jpg',
     stats: [
-      { value: '1+', label: 'Years Experience' },
-      { value: '5+', label: 'Projects Completed' },
-      { value: '100%', label: 'Client Satisfaction' },
-      { value: '24/7', label: 'Support' }
-    ],
-    interests: ['AI & Machine Learning', 'Sci-Fi Movies', 'Personal Projects', 'Open-Source Contribution', 'Mobile UI/UX', 'Tech Blogging']
+      { value: 'Self-Driven • Curious • Detail-Oriented', label: '⚡ Work Ethic' },
+      { value: 'Project-Based Practical Learning', label: '💻 Hands-on Experience' },
+      { value: 'Aspiring Data Scientist (AI & ML)', label: '🎯 Career Focus' },
+      { value: '4+ Academic & Personal Projects', label: '🚀 Projects Completed' } ,
+      { value: '24/7', label: '🎯 Availability' }
+    ],    interests: ['AI & Machine Learning', 'Sci-Fi Movies', 'Personal Projects', 'Problem Solving', 'Learning by Practice', 'Data Exploration'
+]
   },
 
   skills: {
@@ -36,30 +38,12 @@ export const mockData = {
       {
         name: 'Technologies',
         skills: [
-          { name: '', level: 85 },
-          { name: 'PostgreSQL', level: 80 },
-          { name: 'REST APIs', level: 90 },
-          { name: 'Git', level: 85 }
+          { name: 'Jupyter Notebook', level: 65 },
+          { name: 'PostgreSQL', level: 55 },
+          { name: 'CSV / Excel Data Handling', level: 70 },
+          { name: 'Git', level: 60 }
         ]
       },
-      {
-        name: 'Mobile Development',
-        skills: [
-          { name: 'Cross-platform Development', level: 90 },
-          { name: 'UI/UX Implementation', level: 85 },
-          { name: 'State Management', level: 88 },
-          { name: 'Performance Optimization', level: 80 }
-        ]
-      },
-      {
-        name: 'Web Development',
-        skills: [
-          { name: 'React', level: 75 },
-          { name: 'Node.js', level: 70 },
-          { name: 'HTML/CSS', level: 85 },
-          { name: 'Responsive Design', level: 80 }
-        ]
-      }
     ],
     additionalSkills: [
       'Data Analysis',
@@ -80,90 +64,59 @@ export const mockData = {
         title: 'Data Science Engineer',
         company: 'Q Spider Tech',
         location: 'Gurugram, India',
-        duration: 'Dec 2023 - Present',
-        description: 'Leading Flutter development for innovative mobile applications focused on digitizing paper-based workflows and improving business operations.',
+        duration: 'July 2025 - Present',
+        description: 'Worked on project-based learning involving data handling, basic analysis, and applying Python to solve structured problems.',
         achievements: [
-          'Collaborated on the development of business-critical mobile applications that digitized paper-based workflows',
-          'Introduced new features such as advanced task management modules and intuitive user interfaces',
-          'Worked on Excel sheet and PDF file export features for enhanced data management',
-          'Optimized the codebase for improved performance, stability, and scalability',
-          'Focused on operational efficiency by 45%, reducing key workflows and reducing manual overhead',
-          'Worked on excel sheet and PDF file export feature',
-          'Engineered smart inventory tracking, implemented rule-based task automation, and ensured secure, encrypted data handling',
-          'Strengthened understanding of business workflows, optimized database structures, and contributed to end-to-end app design'
+          'Worked on project-based tasks involving structured data handling and basic analysis using Python and spreadsheets',
+          'Assisted in organizing, cleaning, and validating datasets used in application workflows',
+          'Handled Excel and CSV files to understand data structure, trends, and basic reporting',
+          'Supported data-driven features by preparing datasets and ensuring consistency acr oss systems',
+          'Learned how data flows through applications and how it supports decision-making',
+          'Practiced basic performance awareness by working with optimized data formats and queries',
+          'Gained exposure to rule-based logic and simple automation concepts using data inputs',
+          'Developed a strong understanding of real-world data problems, edge cases, and accuracy requirements'
         ],
-        technologies: ['Flutter', 'Dart', 'Firebase', 'REST APIs', 'Git', 'Excel Integration', 'PDF Generation']
+        technologies: ['Python','Jupyter Notebook','Excel / CSV Data Handling','PostgreSQL (Basics)','REST APIs (Data Consumption)','Git']
       },
+
       {
-        title: 'Flutter Development Intern',
-        company: 'TechNova Solutions',
+
+        title: 'AI & Data Science Intern (Project-Based)',
+        company: 'Self-Learning / Academic Projects',
         location: 'Gurugram, India',
-        duration: 'Aug 2023 - Dec 2023',
-        description: 'Gained hands-on experience in Flutter development while working on scalable mobile applications and learning industry best practices.',
+        duration: 'Aug 2025 - Dec 2025',
+        description: 'Gained hands-on experience through project-based learning in data science and AI, focusing on Python, data handling, and basic machine learning concepts.',
         achievements: [
-          'Collaborated on a cross-functional team to develop a scalable Flutter-based mobile app for a service aggregator platform',
-          'Integrated Firebase Authentication, Firestore database, and push notifications for real-time interactions',
-          'Built dynamic UI components using GetX for smooth state management and modular architecture',
-          'Developed a booking widget with user-customizable options, scheduling, and responsive layout for both Android and iOS platforms',
-          'Implemented RESTful API integration and error-handling strategies to ensure a seamless user experience',
-          'Gained hands-on experience in agile development, Git workflows, pull-based version control, and continuous testing',
-          'Handled mobile app updates using Flutter for smooth releases across platforms'
-        ],
-        technologies: ['Flutter', 'Dart', 'Firebase', 'GetX', 'REST APIs', 'Git', 'Agile Development']
-      }
+          'Worked on Python-based projects involving data collection, cleaning, and basic analysis',
+          'Built an AI-powered virtual assistant using Python with integration of Google Gemini API', 
+          'Handled structured data using CSV and Excel files to understand patterns and insights',
+          'Practiced writing clean Python code for data processing and automation tasks',
+          'Learned how APIs are used to connect AI models with applications',
+          'Tested and refined project outputs by analyzing responses and improving logic step by step',
+          'Developed a clear understanding of real-world data problems and model limitations',
+          'Strengthened debugging, problem-solving, and analytical thinking skills through hands-on practice'],
+        technologies: ['Python','Google Gemini API','Jupyter Notebook','CSV / Excel Data Handling','Basic Machine Learning Concepts','REST APIs (Basics)','Git']
+        }
+
     ]
   },
 
   projects: {
     projects: [
       {
-        title: 'Motel App',
-        description: 'A comprehensive hotel management system with separate dashboards for staff and guests, featuring real-time booking management and room availability tracking.',
-        features: [
-          'Different dashboards for staff and guests',
-          'Integrated easy check-in and check-out',
-          'Implemented room availability based on time after checking out',
-          'Real-time booking updates',
-          'Payment integration',
-          'Multi-role user management'
-        ],
-        technologies: ['Flutter', 'Dart', 'Firebase'],
-        githubUrl: 'https://github.com/ialtaf14/motel-app',
+        title: 'AI Virtual Assistant',
+        description: 'A Python-based AI virtual assistant built using Google Gemini API to understand user queries and generate intelligent, context-aware responses.',
+        features: ['Takes natural language input from users and processes it using Python',
+          'Integrated Google Gemini API for generating AI-powered responses',
+          'Handled API requests, responses, and basic error cases',
+          'Worked on prompt structuring to improve response relevance',
+          'Implemented simple logic to manage conversation flow',
+          'Tested the assistant with different types of queries to improve accuracy'],
+        technologies: ['Python','Google Gemini API','REST APIs','Basic Prompt Engineering','JSON Data Handling'],
+        githubUrl: 'https://github.com/ialtaf14/ai-virtual-assistant',
         liveUrl: null,
-        image: '/images/motel-app.jpg'
+        image: "/images/ai-virtual-assistant.jpg"
       },
-      {
-        title: 'Image Generation & Chatbot App',
-        description: 'An AI-powered application combining image generation capabilities with an intelligent chatbot interface for creative and conversational interactions.',
-        features: [
-          'Image generation using Hugging Face models',
-          'Integrated text-to-image & text-to-text functionality',
-          'Implemented using REST APIs',
-          'Clean and intuitive UI',
-          'Real-time chat interface',
-          'Image gallery and history'
-        ],
-        technologies: ['Flutter', 'Dart', 'LLM', 'SD 3.5'],
-        githubUrl: 'https://github.com/ialtaf14/ai-chat-app',
-        liveUrl: null,
-        image: '/images/ai-chat-app.jpg'
-      },
-      {
-        title: 'ParkIt - Smart Parking App',
-        description: 'A smart parking management system that helps users find and reserve parking spaces while enabling operators to manage their facilities efficiently.',
-        features: [
-          'Designed a scalable system to manage parking lots, floors, slots, and parking areas',
-          'Implemented features to handle vehicle details, user profiles, and user-vehicle associations',
-          'Enabled real-time tracking of parking slot availability',
-          'Booking and reservation system',
-          'Payment gateway integration',
-          'Real-time notifications'
-        ],
-        technologies: ['Flutter', 'Dart', 'Supabase'],
-        githubUrl: 'https://github.com/ialtaf14/parkit-app',
-        liveUrl: null,
-        image: '/images/parkit-app.jpg'
-      }
     ]
   },
 
@@ -173,21 +126,22 @@ export const mockData = {
         degree: "Bachelor's in Technology",
         institution: 'Gurugram University',
         location: 'Gurugram, India',
-        duration: '2021 - 2026',
-        description: 'Currently pursuing a comprehensive technology degree with focus on software development, data structures, and modern programming methodologies.',
+        duration: '2022 - 2026',
+        description: 'Currently pursuing a technology degree with a strong focus on data science, machine learning, and analytical problem-solving.',
         highlights: [
           'Will successfully complete curriculum by 2026',
-          'Took ownership of onboarding new Flutter developers by creating starter kits, setup guides, and walkthroughs to streamline team integration',
-          'Active participation in coding competitions and hackathons',
-          'Leadership roles in technical societies'
+          'Built structured onboarding resources and technical documentation, demonstrating ownership, clarity in communication, and process optimization',
+          'Active participant in coding competitions and hackathons, applying data-driven thinking, problem-solving, and rapid prototyping skills',
+          'Held leadership roles in technical societies, contributing to collaboration, mentoring, and knowledge-sharing initiatives'
         ],
         coursework: [
           'Data Structures & Algorithms',
-          'Object-Oriented Programming',
-          'Database Management Systems',
-          'Software Engineering',
-          'Mobile Application Development',
-          'Web Development',
+          'Database Management Systems (SQL & Data Modeling)',
+          'Object-Oriented Programming (Python)',
+          'Statistics & Probability for Data Analysis',
+          'Machine Learning Fundamentals',
+          'Software Engineering & Data Pipelines',
+          'Data Visualization & Analysis',
           'Computer Networks',
           'Operating Systems'
         ]
@@ -195,24 +149,16 @@ export const mockData = {
     ],
     certifications: [
       {
-        name: 'Flutter Development Certification',
-        issuer: 'Google Developers',
-        date: '2023'
+        name: 'Artificial Intelligence: Concepts and Techniques',
+        issuer: 'NPTEL',
+        date: '2025',
+        pdf: '/certificates/nptel-ai.pdf'
       },
       {
-        name: 'Firebase Certified Developer',
-        issuer: 'Google Cloud',
-        date: '2023'
-      },
-      {
-        name: 'Git Version Control',
-        issuer: 'Atlassian',
-        date: '2023'
-      },
-      {
-        name: 'REST API Development',
-        issuer: 'Postman',
-        date: '2023'
+        name: 'Introduction to Internet of Things',
+        issuer: 'NPTEL',
+        date: '2025',
+        pdf: '/certificates/nptel-iot.pdf'
       }
     ]
   }
