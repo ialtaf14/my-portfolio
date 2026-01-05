@@ -108,7 +108,7 @@ const Contact = () => {
                                     Contact Information
                                 </h3>
 
-                                <div className="space-y-6">
+                                <div className="space-y-4 sm:space-y-6">
                                     {contactInfo.map((item, index) => {
                                         const IconComponent = item.icon;
                                         return (

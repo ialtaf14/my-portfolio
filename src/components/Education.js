@@ -57,7 +57,7 @@ const Education = ({ data }) => {
                   <div className="absolute left-6 top-16 w-0.5 h-full bg-accent/20" />
                 )}
 
-                <div className="flex gap-6 group">
+                <div className="flex gap-4 sm:gap-6 group">
                   {/* Timeline Icon */}
                   <div className="relative flex-shrink-0">
                     <motion.div

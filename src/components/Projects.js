@@ -124,7 +124,7 @@ const Projects = ({ data }) => {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-xl font-semibold transition-colors duration-200 text-gradient-card">
                       {project.title}

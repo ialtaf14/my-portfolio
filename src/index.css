@@ -5,7 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
   }
 
 

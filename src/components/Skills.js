@@ -56,7 +56,7 @@ const Skills = ({ data }) => {
               return (
                 <motion.div
                   key={category.name}
-                  className="glass-card p-4 transition-all duration-300"
+                  className="glass-card p-3 sm:p-4 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: 0.4 + categoryIndex * 0.1 }}

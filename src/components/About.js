@@ -74,7 +74,7 @@ const About = ({ data }) => {
                         </motion.div>
 
                         <motion.div
-                            className="relative w-[450px] h-[450px] mx-auto md:mx-0 glass-card rounded-2xl overflow-hidden group cursor-pointer"
+                            className="relative w-full max-w-[350px] lg:max-w-[450px] aspect-square mx-auto md:mx-0 glass-card rounded-2xl overflow-hidden group cursor-pointer"
                             initial={{ opacity: 0, x: 50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
