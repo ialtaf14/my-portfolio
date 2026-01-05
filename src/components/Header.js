@@ -105,6 +105,7 @@ const Header = () => {
               <motion.button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
+                aria-label={`Scroll to ${item.label} section`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeSection === item.href.substring(1)
                   ? 'bg-white/10 text-white shadow-lg'
                   : 'text-white/80 hover:text-white hover:bg-white/5'
@@ -120,6 +121,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="md:hidden p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-colors duration-200"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

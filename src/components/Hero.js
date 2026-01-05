@@ -83,6 +83,7 @@ const Hero = ({ data }) => {
               <motion.a
                 href="/cv/Altaf_Khan_CV.pdf"
                 download
+                aria-label="Download Altaf Khan's Resume"
                 className="btn-primary btn-elegant flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -93,6 +94,7 @@ const Hero = ({ data }) => {
 
               <motion.button
                 className="btn-secondary btn-elegant flex items-center justify-center"
+                aria-label="Scroll to contact section"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
@@ -116,7 +118,8 @@ const Hero = ({ data }) => {
               >
                 <img
                   src="/images/altaf.jpg"
-                  alt="Altaf Khan"
+                  alt="Altaf Khan - Professional Headshot"
+                  loading="eager"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </motion.div>
@@ -135,10 +138,10 @@ const Hero = ({ data }) => {
             </div>
           </motion.div>
         </div>
-      </div >
+      </div>
 
       {/* Scroll Indicator */}
-      < motion.div
+      <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -146,14 +149,15 @@ const Hero = ({ data }) => {
       >
         <motion.button
           onClick={scrollToAbout}
+          aria-label="Scroll to About section"
           className="p-3 rounded-full bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 text-white/60 hover:text-white transition-all duration-300"
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <ArrowDown className="w-6 h-6" />
         </motion.button>
-      </motion.div >
-    </section >
+      </motion.div>
+    </section>
   );
 };
 

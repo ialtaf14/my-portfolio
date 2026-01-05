@@ -88,7 +88,8 @@ const About = ({ data }) => {
                         >
                             <img
                                 src={data.image}
-                                alt="About Image"
+                                alt="Altaf Khan - About Me Image"
+                                loading="lazy"
                                 className="w-full h-full object-cover"
                             />
 

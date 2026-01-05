@@ -50,7 +50,7 @@ const Contact = () => {
             icon: X,
             label: 'X',
             href: 'https://x.com/ialtaf14',
-            color: 'hover:text-[#fafafa]'
+            color: 'hover:text-[#fafafa]                                                                        '
         },
         {
             icon: Send,
@@ -117,6 +117,7 @@ const Contact = () => {
                                                 href={item.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                aria-label={`Contact via ${item.label}: ${item.value}`}
                                                 className={`group flex items-center gap-4 cursor-pointer transition-colors duration-300 ${item.color}`}
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -159,6 +160,7 @@ const Contact = () => {
                                                 href={social.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                aria-label={`Visit my ${social.label} profile`}
                                                 className={`group flex items-center gap-3 px-4 py-3 rounded-xl glass-card transition-all duration-300 ${social.color}`}
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

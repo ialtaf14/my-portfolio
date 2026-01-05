@@ -60,7 +60,8 @@ const Projects = ({ data }) => {
                 <div className="relative h-40 overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - Project Screenshot`}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.src = '/images/fallback.jpg';
@@ -71,6 +72,7 @@ const Projects = ({ data }) => {
                   <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.liveUrl && (
                       <motion.button
+                        aria-label={`View live demo of ${project.title}`}
                         className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -82,6 +84,7 @@ const Projects = ({ data }) => {
 
                     {project.githubUrl && (
                       <motion.button
+                        aria-label={`View source code of ${project.title} on GitHub`}
                         className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -209,6 +212,7 @@ const Projects = ({ data }) => {
             }}
           >
             <motion.button
+              aria-label="View more projects on GitHub"
               className="px-8 py-3 glass rounded-full font-medium text-white/90 transition-all duration-300 hover:bg-white/20"
               animate={{
                 boxShadow: ["0 0 0 rgba(255,255,255,0)", "0 0 20px rgba(255,255,255,0.1)", "0 0 0 rgba(255,255,255,0)"]
