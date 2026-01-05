@@ -19,7 +19,7 @@ const Projects = ({ data }) => {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+              className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-ios"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -46,7 +46,7 @@ const Projects = ({ data }) => {
             {data.projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="group glass-card overflow-hidden hover:border-white/30 transition-all duration-300 hover:shadow-2xl"
+                className="group glass-card overflow-hidden transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -126,7 +126,7 @@ const Projects = ({ data }) => {
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-200">
+                    <h3 className="text-xl font-semibold transition-colors duration-200 text-gradient-card">
                       {project.title}
                     </h3>
                     <div className="flex gap-2">
@@ -151,7 +151,7 @@ const Projects = ({ data }) => {
                     </div>
                   </div>
 
-                  <p className="text-foreground/70 mb-4 text-sm leading-relaxed">
+                  <p className="text-blue-100/80 mb-4 text-sm leading-relaxed">
                     {project.description}
                   </p>
 

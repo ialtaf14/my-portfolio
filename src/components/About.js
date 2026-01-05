@@ -22,7 +22,7 @@ const About = ({ data }) => {
                 >
                     <div className="text-center mb-12">
                         <motion.h2
-                            className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+                            className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-ios"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
@@ -53,11 +53,11 @@ const About = ({ data }) => {
                                 {data.detailedDescription}
                             </p>
 
-                            <div className="grid grid-cols-2 gap-6 pt-6">
+                            <div className="grid grid-cols-2 gap-x-12 gap-y-8 pt-6">
                                 {data.stats.map((stat, index) => (
                                     <motion.div
                                         key={stat.label}
-                                        className="text-center"
+                                        className={`text-center ${index === data.stats.length - 1 ? 'col-span-2' : ''}`}
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                                         transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
@@ -74,7 +74,7 @@ const About = ({ data }) => {
                         </motion.div>
 
                         <motion.div
-                            className="relative w-64 h-64 mx-auto md:mx-0 glass-card rounded-2xl overflow-hidden group cursor-pointer"
+                            className="relative w-[450px] h-[450px] mx-auto md:mx-0 glass-card rounded-2xl overflow-hidden group cursor-pointer"
                             initial={{ opacity: 0, x: 50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.8, delay: 0.5 }}

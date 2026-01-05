@@ -26,7 +26,7 @@ const Skills = ({ data }) => {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+              className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-ios"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -56,7 +56,7 @@ const Skills = ({ data }) => {
               return (
                 <motion.div
                   key={category.name}
-                  className="glass-card p-4 hover:border-white/30 transition-all duration-300 hover:shadow-xl"
+                  className="glass-card p-4 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: 0.4 + categoryIndex * 0.1 }}
@@ -66,7 +66,7 @@ const Skills = ({ data }) => {
                     <IconComponent className="w-5 h-5 text-accent" />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-foreground mb-4">
+                  <h3 className="text-lg font-semibold mb-4 text-gradient-card">
                     {category.name}
                   </h3>
 

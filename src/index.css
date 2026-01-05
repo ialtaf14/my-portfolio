@@ -5,22 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 18px;
   }
 
-  @media (min-width: 1024px) {
-    html {
-      font-size: 20px;
-      /* Scale up for laptops */
-    }
-  }
-
-  @media (min-width: 1536px) {
-    html {
-      font-size: 24px;
-      /* Scale further for large screens */
-    }
-  }
 
   :root {
     --background: 222 47% 11%;
@@ -49,20 +36,18 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Deep Blue/Purple iOS 17 style mesh gradient */
-  background-color: #000000;
+  /* Deep Blue/Purple iOS 17 style mesh gradient (Refined Dark Mode) */
+  background-color: #020617;
   background-image:
-    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
-    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(339, 49%, 30%, 1) 0, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(225, 39%, 30%, 1) 0, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(253, 30%, 15%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 40%, 20%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 40%, 20%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(339, 40%, 20%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(225, 40%, 20%, 1) 0, transparent 50%);
   background-attachment: fixed;
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes gradientBG {
@@ -103,15 +88,15 @@ body {
 
 @layer utilities {
   .glass {
-    @apply bg-white/5 backdrop-blur-3xl backdrop-saturate-150 border border-white/10 shadow-lg;
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl backdrop-saturate-200 border border-white/20 shadow-lg;
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 shadow-2xl rounded-3xl transition-all duration-300 hover:border-white/50;
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl backdrop-saturate-200 border border-white/20 shadow-2xl rounded-3xl transition-all duration-300;
   }
 
   .glass-panel {
-    @apply bg-white/5 backdrop-blur-3xl backdrop-saturate-150 border border-white/5 shadow-xl rounded-2xl;
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl backdrop-saturate-200 border border-white/20 shadow-xl rounded-2xl;
   }
 
   .glass-nav {
@@ -138,9 +123,29 @@ body {
     @apply bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10;
   }
 
+  .text-gradient-ios {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 animate-pulse;
+    background-size: 200% auto;
+    animation: textShimmer 4s linear infinite;
+  }
+
+  .text-gradient-card {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-white to-blue-200;
+  }
+
   /* Utilities for spacing and layout consistency */
   .section-padding {
     @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
   }
 }
 

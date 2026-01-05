@@ -19,7 +19,7 @@ const Education = ({ data }) => {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+              className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-ios"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -71,12 +71,12 @@ const Education = ({ data }) => {
 
                   {/* Education Card */}
                   <motion.div
-                    className="flex-1 glass-card p-5 hover:border-white/30 transition-all duration-300 hover:shadow-xl"
+                    className="flex-1 glass-card p-5 transition-all duration-300"
                     whileHover={{ y: -2 }}
                   >
                     <div className="flex flex-wrap items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                        <h3 className="text-xl font-semibold mb-2 text-gradient-card">
                           {degree.degree}
                         </h3>
                         <div className="flex items-center gap-2 text-accent font-medium mb-2">
@@ -104,7 +104,7 @@ const Education = ({ data }) => {
                     </div>
 
                     {degree.description && (
-                      <p className="text-foreground/80 mb-4 leading-relaxed">
+                      <p className="text-blue-100/80 mb-4 leading-relaxed">
                         {degree.description}
                       </p>
                     )}
@@ -178,7 +178,7 @@ const Education = ({ data }) => {
                 {data.certifications.map((cert, index) => (
                   <motion.div
                     key={index}
-                    className="glass-card p-4 hover:border-white/30 transition-all duration-300 hover:shadow-xl group relative overflow-hidden"
+                    className="glass-card p-4 transition-all duration-300 group relative overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
@@ -189,7 +189,7 @@ const Education = ({ data }) => {
                         <Award className="w-5 h-5 text-accent" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-foreground text-sm mb-1 line-clamp-2">
+                        <h4 className="font-semibold text-sm mb-1 line-clamp-2 text-gradient-card">
                           {cert.name}
                         </h4>
                         <p className="text-accent text-xs font-medium mb-1">

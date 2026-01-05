@@ -62,7 +62,7 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="min-h-screen py-10 flex flex-col justify-center">
+        <section id="contact" className="min-h-screen pt-10 pb-0 flex flex-col justify-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -72,7 +72,7 @@ const Contact = () => {
                 >
                     <div className="text-center mb-16">
                         <motion.h2
-                            className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+                            className="text-3xl sm:text-4xl font-bold mb-4 text-gradient-ios"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
@@ -159,7 +159,7 @@ const Contact = () => {
                                                 href={social.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className={`group flex items-center gap-3 px-4 py-3 rounded-xl glass-card transition-all duration-300 hover:border-white/30 hover:shadow-xl ${social.color}`}
+                                                className={`group flex items-center gap-3 px-4 py-3 rounded-xl glass-card transition-all duration-300 ${social.color}`}
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                 transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.9 + index * 0.1 }}
@@ -168,7 +168,7 @@ const Contact = () => {
                                                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/20">
                                                     <IconComponent className="w-5 h-5 text-accent group-hover:text-current" />
                                                 </div>
-                                                <span className="text-sm font-medium text-foreground/70 group-hover:text-current transition-colors duration-300">
+                                                <span className="text-sm font-medium text-blue-100/80 group-hover:text-current transition-colors duration-300">
                                                     {social.label}
                                                 </span>
                                             </motion.a>

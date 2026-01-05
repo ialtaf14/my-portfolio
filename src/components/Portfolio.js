@@ -21,7 +21,7 @@ const Portfolio = () => {
   }, [isInView, mainControls]);
 
   return (
-    <div className="min-h-screen text-foreground transition-colors duration-300 pb-32">
+    <div className="min-h-screen text-foreground transition-colors duration-300">
       <Header />
       <main>
         <motion.div
