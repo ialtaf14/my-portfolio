@@ -66,8 +66,13 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="cursor-pointer" onClick={() => scrollToSection('#home')}>
-                Altaf Khan
+              <span className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollToSection('#home')}>
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/50 transition-colors duration-300">
+                  <img src="/images/header-profile-final.jpg" alt="Altaf Khan" className="w-full h-full object-cover" />
+                </div>
+                <span className="text-xl font-bold tracking-tight text-white group-hover:text-white/90 transition-colors duration-200">
+                  Altaf Khan
+                </span>
               </span>
             </motion.div>
 

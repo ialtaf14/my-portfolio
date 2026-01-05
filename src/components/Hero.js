@@ -27,13 +27,13 @@ const Hero = ({ data }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <p className="inline-block px-3 py-1 rounded-full glass text-xs font-medium text-white/80 tracking-wide mb-4">
+                <p className="inline-block px-4 py-1.5 rounded-full glass text-base font-medium text-white/80 tracking-widest mb-4">
                   ASPIRING DATA SCIENTIST
                 </p>
               </motion.div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-responsive-lg text-gradient-ios"
+                className="text-6xl sm:text-7xl lg:text-8xl font-black leading-[1.1] text-responsive-lg text-gradient-ios"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -43,7 +43,7 @@ const Hero = ({ data }) => {
               </motion.h1>
 
               <motion.p
-                className="text-lg sm:text-xl text-foreground/70 max-w-2xl leading-relaxed text-responsive-md mx-auto lg:mx-0"
+                className="text-2xl sm:text-3xl text-foreground/80 max-w-3xl leading-relaxed text-responsive-md mx-auto lg:mx-0 font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -104,25 +104,21 @@ const Hero = ({ data }) => {
 
           {/* Profile Image Placeholder */}
           <motion.div
-            className="relative order-first lg:order-last"
+            className="relative lg:order-last"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="profile-image">
+            <div className="profile-image w-full max-w-[350px] lg:max-w-none mx-auto">
               <motion.div
                 className="aspect-square glass-card flex items-center justify-center p-2"
                 whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
               >
                 <img
                   src="/images/altaf.jpg"
                   alt="Altaf Khan"
                   className="w-full h-full object-cover rounded-2xl"
                 />
-
-
-
               </motion.div>
 
               {/* Decorative Elements */}
@@ -139,10 +135,10 @@ const Hero = ({ data }) => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div >
 
       {/* Scroll Indicator */}
-      <motion.div
+      < motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -156,8 +152,8 @@ const Hero = ({ data }) => {
         >
           <ArrowDown className="w-6 h-6" />
         </motion.button>
-      </motion.div>
-    </section>
+      </motion.div >
+    </section >
   );
 };
 

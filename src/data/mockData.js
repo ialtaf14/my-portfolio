@@ -7,7 +7,7 @@ export const mockData = {
     phone: '+91 8053821088',
     location: 'Gurugram, India',
     resume: '#', // Placeholder for resume link
-    profileImage: '/images/profile.jpg' // Placeholder
+    profileImage: '/images/altaf.jpg' // Updated to existing image
   },
 
   about: {

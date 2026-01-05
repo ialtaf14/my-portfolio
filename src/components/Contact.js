@@ -128,10 +128,10 @@ const Contact = () => {
                                                     <IconComponent className="w-5 h-5 text-blue-300 group-hover:text-current" />
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm font-medium text-blue-200/60 mb-1">
+                                                    <p className="text-sm font-medium text-blue-200/60 mb-1 transition-colors duration-300 group-hover:text-current opacity-80 group-hover:opacity-100">
                                                         {item.label}
                                                     </p>
-                                                    <p className="font-medium text-white/90 transition-colors duration-300">
+                                                    <p className="font-medium text-white/90 transition-colors duration-300 group-hover:text-current">
                                                         {item.value}
                                                     </p>
                                                 </div>
