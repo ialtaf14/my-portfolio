@@ -21,19 +21,19 @@ const Hero = ({ data }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="space-y-4">
+            <div className="space-y-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <p className="inline-block px-4 py-1.5 rounded-full glass text-base font-medium text-white/80 tracking-widest mb-4">
+                <p className="inline-block px-4 py-1.5 rounded-full glass text-base font-medium text-white/80 tracking-widest">
                   ASPIRING DATA SCIENTIST
                 </p>
               </motion.div>
 
               <motion.h1
-                className="text-6xl sm:text-7xl lg:text-8xl font-black leading-[1.1] text-responsive-lg text-gradient-ios"
+                className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.1] text-responsive-lg text-gradient-ios"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -43,7 +43,7 @@ const Hero = ({ data }) => {
               </motion.h1>
 
               <motion.p
-                className="text-2xl sm:text-3xl text-foreground/80 max-w-3xl leading-relaxed text-responsive-md mx-auto lg:mx-0 font-medium"
+                className="text-xl sm:text-2xl text-foreground/80 max-w-3xl leading-relaxed text-responsive-md mx-auto lg:mx-0 font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -120,6 +120,7 @@ const Hero = ({ data }) => {
                   src="/images/altaf.jpg"
                   alt="Altaf Khan - Professional Headshot"
                   loading="eager"
+                  fetchPriority="high"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </motion.div>
