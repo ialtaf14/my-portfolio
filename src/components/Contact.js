@@ -124,14 +124,14 @@ const Contact = () => {
                                                 whileHover={{ x: 5 }}
 
                                             >
-                                                <div className="w-12 h-12 glass rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-white/20">
-                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-current" />
+                                                <div className="w-12 h-12 glass-card rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-white/20">
+                                                    <IconComponent className="w-5 h-5 text-blue-300 group-hover:text-current" />
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm font-medium text-foreground/60 mb-1">
+                                                    <p className="text-sm font-medium text-blue-200/60 mb-1">
                                                         {item.label}
                                                     </p>
-                                                    <p className="font-medium transition-colors duration-300">
+                                                    <p className="font-medium text-white/90 transition-colors duration-300">
                                                         {item.value}
                                                     </p>
                                                 </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                                                 whileHover={{ y: -5, scale: 1.05 }}
                                             >
                                                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/20">
-                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-current" />
+                                                    <IconComponent className="w-5 h-5 text-blue-300 group-hover:text-current" />
                                                 </div>
                                                 <span className="text-sm font-medium text-blue-100/80 group-hover:text-current transition-colors duration-300">
                                                     {social.label}

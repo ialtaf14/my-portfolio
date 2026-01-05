@@ -63,7 +63,7 @@ const Skills = ({ data }) => {
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-center justify-center w-10 h-10 bg-accent/10 rounded-lg mb-3">
-                    <IconComponent className="w-5 h-5 text-accent" />
+                    <IconComponent className="w-5 h-5 text-blue-300" />
                   </div>
 
                   <h3 className="text-lg font-semibold mb-4 text-gradient-card">

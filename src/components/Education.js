@@ -79,12 +79,12 @@ const Education = ({ data }) => {
                         <h3 className="text-xl font-semibold mb-2 text-gradient-card">
                           {degree.degree}
                         </h3>
-                        <div className="flex items-center gap-2 text-accent font-medium mb-2">
+                        <div className="flex items-center gap-2 text-blue-300 font-medium mb-2">
                           <BookOpen className="w-4 h-4" />
                           <span>{degree.institution}</span>
                         </div>
                         {degree.gpa && (
-                          <div className="flex items-center gap-2 text-foreground/60 text-sm">
+                          <div className="flex items-center gap-2 text-blue-200/80 text-sm">
                             <Award className="w-4 h-4" />
                             <span>GPA: {degree.gpa}</span>
                           </div>
@@ -92,11 +92,11 @@ const Education = ({ data }) => {
                       </div>
 
                       <div className="flex flex-col gap-2 text-sm text-foreground/60">
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 text-blue-200/60">
                           <Calendar className="w-4 h-4" />
                           <span>{degree.duration}</span>
                         </div>
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 text-blue-200/60">
                           <MapPin className="w-4 h-4" />
                           <span>{degree.location}</span>
                         </div>
@@ -186,17 +186,17 @@ const Education = ({ data }) => {
                   >
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Award className="w-5 h-5 text-accent" />
+                        <Award className="w-5 h-5 text-blue-300" />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-semibold text-sm mb-1 line-clamp-2 text-gradient-card">
                           {cert.name}
                         </h4>
-                        <p className="text-accent text-xs font-medium mb-1">
+                        <p className="text-blue-200 text-xs font-medium mb-1">
                           {cert.issuer}
                         </p>
                         {cert.date && (
-                          <p className="text-foreground/60 text-xs">
+                          <p className="text-blue-200/80 text-xs">
                             {cert.date}
                           </p>
                         )}

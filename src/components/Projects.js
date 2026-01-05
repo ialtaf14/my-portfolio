@@ -132,7 +132,7 @@ const Projects = ({ data }) => {
                     <div className="flex gap-2">
                       {project.githubUrl && (
                         <motion.button
-                          className="p-2 text-foreground/60 hover:text-accent transition-colors duration-200"
+                          className="p-2 text-blue-300 hover:text-white transition-colors duration-200"
                           whileHover={{ scale: 1.1 }}
                           onClick={() => window.open(project.githubUrl, '_blank')}
                         >
@@ -141,7 +141,7 @@ const Projects = ({ data }) => {
                       )}
                       {project.liveUrl && (
                         <motion.button
-                          className="p-2 text-foreground/60 hover:text-accent transition-colors duration-200"
+                          className="p-2 text-blue-300 hover:text-white transition-colors duration-200"
                           whileHover={{ scale: 1.1 }}
                           onClick={() => window.open(project.liveUrl, '_blank')}
                         >
