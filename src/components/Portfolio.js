@@ -4,7 +4,6 @@ import Header from './Header';
 import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
-import Experience from './Experience';
 import Projects from './Projects';
 import Education from './Education';
 import Contact from './Contact';
@@ -22,7 +21,7 @@ const Portfolio = () => {
   }, [isInView, mainControls]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+    <div className="min-h-screen text-foreground transition-colors duration-300 pb-32">
       <Header />
       <main>
         <motion.div
@@ -38,7 +37,6 @@ const Portfolio = () => {
           <Hero data={mockData.personal} />
           <About data={mockData.about} />
           <Skills data={mockData.skills} />
-          <Experience data={mockData.experience} />
           <Projects data={mockData.projects} />
           <Education data={mockData.education} />
           <Contact />

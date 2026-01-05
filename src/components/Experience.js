@@ -9,7 +9,7 @@ const Experience = ({ data }) => {
   const isInView = useInView(ref, { once: true, threshold: 0.2 });
 
   return (
-    <section id="experience" className="py-20" style={{backgroundColor: '#E9EDC9'}}>
+    <section id="experience" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -55,12 +55,12 @@ const Experience = ({ data }) => {
                 {index < data.positions.length - 1 && (
                   <div className="absolute left-8 top-20 w-0.5 h-full bg-accent/20" />
                 )}
-                
+
                 <div className="flex gap-8">
                   {/* Timeline Dot */}
                   <div className="relative flex-shrink-0">
                     <motion.div
-                      className="w-16 h-16 bg-accent rounded-full flex items-center justify-center border-4 border-background shadow-lg"
+                      className="w-16 h-16 bg-blue-500/20 backdrop-blur-md rounded-full flex items-center justify-center border-4 border-transparent shadow-lg"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -72,7 +72,7 @@ const Experience = ({ data }) => {
 
                   {/* Experience Card */}
                   <motion.div
-                    className="flex-1 bg-background rounded-xl p-6 border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
+                    className="flex-1 glass-card p-6 hover:border-white/30 transition-all duration-300 hover:shadow-xl"
                     whileHover={{ y: -2 }}
                   >
                     <div className="flex flex-wrap items-start justify-between mb-4">
@@ -87,7 +87,7 @@ const Experience = ({ data }) => {
                           )}
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-col sm:flex-row gap-2 text-sm text-foreground/60">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
@@ -131,7 +131,7 @@ const Experience = ({ data }) => {
                         {position.technologies.map((tech, techIndex) => (
                           <motion.span
                             key={tech}
-                            className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium hover:bg-accent hover:text-white transition-all duration-200 cursor-default"
+                            className="px-3 py-1 glass text-white/90 rounded-full text-xs font-medium hover:bg-white/20 transition-all duration-200 cursor-default"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.3, delay: 0.8 + index * 0.2 + techIndex * 0.05 }}

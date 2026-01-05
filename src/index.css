@@ -2,85 +2,162 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-}
-
-
-
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 20px;
+      /* Scale up for laptops */
+    }
+  }
+
+  @media (min-width: 1536px) {
+    html {
+      font-size: 24px;
+      /* Scale further for large screens */
+    }
+  }
+
   :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-    }
-  .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --radius: 1rem;
+  }
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Deep Blue/Purple iOS 17 style mesh gradient */
+  background-color: #000000;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(339, 49%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(225, 39%, 30%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
 
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
 
-@layer base {
-  * {
-    @apply border-border;
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+  }
+}
+
+@layer components {
+
+  /* Override default container to fill more screen width as requested */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 94vw;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
-  body {
-    @apply bg-background text-foreground;
-    }
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-3xl backdrop-saturate-150 border border-white/10 shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 shadow-2xl rounded-3xl transition-all duration-300 hover:border-white/50;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-3xl backdrop-saturate-150 border border-white/5 shadow-xl rounded-2xl;
+  }
+
+  .glass-nav {
+    @apply bg-white/5 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/5;
+  }
+
+  .glass-input {
+    @apply bg-white/5 backdrop-blur-xl backdrop-saturate-150 border border-white/10 rounded-xl focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all outline-none text-white placeholder-white/30;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-elegant {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-white text-black hover:bg-white/90 shadow-lg shadow-white/10 border border-transparent;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10;
+  }
+
+  /* Utilities for spacing and layout consistency */
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

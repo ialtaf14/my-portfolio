@@ -6,10 +6,10 @@ import { ExternalLink, Github, Smartphone, Eye } from 'lucide-react';
 
 const Projects = ({ data }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="min-h-screen py-10 flex flex-col justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -42,54 +42,57 @@ const Projects = ({ data }) => {
             </motion.p>
           </div>
 
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5">
             {data.projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="group bg-background rounded-xl border border-border overflow-hidden hover:border-accent/30 transition-all duration-300 hover:shadow-xl"
+                className="group glass-card overflow-hidden hover:border-white/30 transition-all duration-300 hover:shadow-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                  transition: { type: "spring", stiffness: 300, damping: 20 }
+                }}
               >
                 {/* Project Image Placeholder */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/images/fallback.jpg';
+                    }}
+                  />
 
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.target.src = '/images/fallback.jpg';
-                        }}
-                      />
+                  {/* Overlay with action buttons */}
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.liveUrl && (
+                      <motion.button
+                        className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                      >
+                        <Eye className="w-5 h-5" />
+                      </motion.button>
+                    )}
 
-                      {/* Overlay with action buttons */}
-                      <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        {project.liveUrl && (
-                          <motion.button
-                            className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={() => window.open(project.liveUrl, '_blank')}
-                          >
-                            <Eye className="w-5 h-5" />
-                          </motion.button>
-                        )}
+                    {project.githubUrl && (
+                      <motion.button
+                        className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => window.open(project.githubUrl, '_blank')}
+                      >
+                        <Github className="w-5 h-5" />
+                      </motion.button>
+                    )}
+                  </div>
 
-                        {project.githubUrl && (
-                          <motion.button
-                            className="p-3 bg-white rounded-full text-black hover:bg-accent hover:text-white transition-colors duration-200"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={() => window.open(project.githubUrl, '_blank')}
-                          >
-                            <Github className="w-5 h-5" />
-                          </motion.button>
-                        )}
-                      </div>
 
-                  
                   {/* Overlay with action buttons */}
                   <motion.div
                     className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -116,7 +119,7 @@ const Projects = ({ data }) => {
                         <Github className="w-5 h-5" />
                       </motion.button>
                     )}
-                    
+
                   </motion.div>
                 </div>
 
@@ -178,7 +181,7 @@ const Projects = ({ data }) => {
                     {project.technologies.map((tech, techIndex) => (
                       <motion.span
                         key={tech}
-                        className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium hover:bg-accent hover:text-white transition-all duration-200 cursor-default"
+                        className="px-2 py-1 glass text-white/90 rounded text-xs font-medium hover:bg-white/20 transition-all duration-200 cursor-default"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.3, delay: 0.8 + index * 0.1 + techIndex * 0.05 }}
@@ -205,32 +208,35 @@ const Projects = ({ data }) => {
               delay: 0.6
             }}
           >
-          <motion.button
-            className="
-              px-8 py-3
-              border border-accent
-              text-accent
-              rounded-lg
-              font-medium
-            "
-            whileHover={{
-              scale: 1.08,
-              y: -4,
-              backgroundColor: "#5151ffff", // 👈 accent color (example)
-              color: "#88f293ff"            // 👈 text color (change here)
-            }}
-            whileTap={{ scale: 0.94 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20
-            }}
-            onClick={() => window.open("https://github.com/ialtaf14", "_blank")}
-          >
-            View More Projects
-          </motion.button>
+            <motion.button
+              className="px-8 py-3 glass rounded-full font-medium text-white/90 transition-all duration-300 hover:bg-white/20"
+              animate={{
+                boxShadow: ["0 0 0 rgba(255,255,255,0)", "0 0 20px rgba(255,255,255,0.1)", "0 0 0 rgba(255,255,255,0)"]
+              }}
+              whileHover={{
+                scale: 1.1,
+                y: -4,
+                boxShadow: "0 8px 16px rgba(255, 255, 255, 0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{
+                boxShadow: {
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                },
+                default: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 15
+                }
+              }}
+              onClick={() => window.open("https://github.com/ialtaf14", "_blank")}
+            >
+              View More Projects
+            </motion.button>
           </motion.div>
-      </motion.div>
+        </motion.div>
       </div>
     </section>
   );

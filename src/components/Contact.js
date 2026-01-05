@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Facebook, X, Youtube,
 
 const Contact = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, threshold: 0.3 });
+    const isInView = useInView(ref, { once: false, amount: 0.1 });
 
     const contactInfo = [
         {
@@ -14,7 +14,7 @@ const Contact = () => {
             label: 'Email',
             value: 'altafkhan122105@gmail.com',
             href: 'https://mail.google.com/mail/?view=cm&fs=1&to=altafkhan122105@gmail.com',
-            color: 'hover:text-red-500'
+            color: 'hover:text-[#EA4335]'
         },
         {
             icon: Phone,
@@ -22,14 +22,14 @@ const Contact = () => {
             name: 'Altaf Khan',
             value: '+91 8053821088',
             href: 'tel:+918053821088',
-            color: 'hover:text-green-500'
+            color: 'hover:text-[#34A853]'
         },
         {
             icon: MapPin,
             label: 'Location',
             value: 'Gurugram, India',
             href: 'https://www.google.com/maps/search/?api=1&query=Gurugram,India',
-            color: 'hover:text-blue-500'
+            color: 'hover:text-[#4285F4]'
         }
     ];
 
@@ -38,43 +38,31 @@ const Contact = () => {
             icon: Linkedin,
             label: 'LinkedIn',
             href: 'https://www.linkedin.com/in/ialtaf14/',
-            color: 'hover:text-blue-600'
+            color: 'hover:text-[#0077b5]'
         },
         {
             icon: Github,
             label: 'GitHub',
             href: 'https://github.com/ialtaf14',
-            color: 'hover:text-gray-900 dark:hover:text-gray-100'
-        },
-        {
-            icon: Instagram,
-            label: 'Instagram',
-            href: 'https://www.instagram.com/ialtaf.14/',
-            color: 'hover:text-red-500'
-        },
-        {
-            icon: Facebook,
-            label: 'Facebook',
-            href: 'https://www.facebook.com/ialtaf.14',
-            color: 'hover:text-blue-600'
+            color: 'hover:text-[#fafafa]'
         },
         {
             icon: X,
             label: 'X',
             href: 'https://x.com/ialtaf14',
-            color: 'hover:text-black'
+            color: 'hover:text-[#fafafa]'
         },
         {
             icon: Send,
             label: 'Telegram',
             href: 'https://t.me/ialtaf14',
-            color: 'hover:text-sky-400'
+            color: 'hover:text-[#229ED9]'
         }
 
     ];
 
     return (
-        <section id="contact" className="py-20">
+        <section id="contact" className="min-h-screen py-10 flex flex-col justify-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -123,7 +111,7 @@ const Contact = () => {
                                 <div className="space-y-6">
                                     {contactInfo.map((item, index) => {
                                         const IconComponent = item.icon;
-                                         return (
+                                        return (
                                             <motion.a
                                                 key={item.label}
                                                 href={item.href}
@@ -133,11 +121,11 @@ const Contact = () => {
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                                                whileHover={{ x: 5 }}                                          
-                                                                            
+                                                whileHover={{ x: 5 }}
+
                                             >
-                                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-current">
-                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-white" />
+                                                <div className="w-12 h-12 glass rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-white/20">
+                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-current" />
                                                 </div>
                                                 <div>
                                                     <p className="text-sm font-medium text-foreground/60 mb-1">
@@ -159,7 +147,7 @@ const Contact = () => {
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 transition={{ duration: 0.6, delay: 0.8 }}
                             >
-                                 <h4 className="text-sm uppercase tracking-widest text-foreground/60 mb-4">
+                                <h4 className="text-sm uppercase tracking-widest text-foreground/60 mb-4">
                                     Follow Me
                                 </h4>
                                 <div className="flex flex-wrap gap-4">
@@ -171,16 +159,16 @@ const Contact = () => {
                                                 href={social.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className={`group flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-background transition-all duration-300 hover:border-accent hover:shadow-lg ${social.color}`}
+                                                className={`group flex items-center gap-3 px-4 py-3 rounded-xl glass-card transition-all duration-300 hover:border-white/30 hover:shadow-xl ${social.color}`}
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
-                                                whileHover={{ y: -3 }}
+                                                transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.9 + index * 0.1 }}
+                                                whileHover={{ y: -5, scale: 1.05 }}
                                             >
-                                                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-current">
-                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-white" />
+                                                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/20">
+                                                    <IconComponent className="w-5 h-5 text-accent group-hover:text-current" />
                                                 </div>
-                                                <span className="text-sm font-medium text-foreground/70 group-hover:text-foreground transition-colors duration-300">
+                                                <span className="text-sm font-medium text-foreground/70 group-hover:text-current transition-colors duration-300">
                                                     {social.label}
                                                 </span>
                                             </motion.a>

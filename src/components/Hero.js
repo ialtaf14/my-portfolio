@@ -27,11 +27,11 @@ const Hero = ({ data }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <p className="text-accent font-medium text-sm uppercase tracking-wide">
+                <p className="inline-block px-3 py-1 rounded-full glass text-xs font-medium text-white/80 tracking-wide mb-4">
                   ASPIRING DATA SCIENTIST
                 </p>
               </motion.div>
-              
+
               <motion.h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-responsive-lg"
                 initial={{ opacity: 0, y: 20 }}
@@ -39,9 +39,9 @@ const Hero = ({ data }) => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 Hi, I'm{' '}
-                <span className="text-accent">Altaf Khan</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Altaf Khan</span>
               </motion.h1>
-              
+
               <motion.p
                 className="text-lg sm:text-xl text-foreground/70 max-w-2xl leading-relaxed text-responsive-md mx-auto lg:mx-0"
                 initial={{ opacity: 0, y: 20 }}
@@ -87,10 +87,10 @@ const Hero = ({ data }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-               <Download className="w-4 h-4" />
+                <Download className="w-4 h-4" />
                 Resume
               </motion.a>
-              
+
               <motion.button
                 className="btn-secondary btn-elegant flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
@@ -111,20 +111,20 @@ const Hero = ({ data }) => {
           >
             <div className="profile-image">
               <motion.div
-                className="aspect-square bg-secondary rounded-2xl flex items-center justify-center border border-border image-placeholder"
+                className="aspect-square glass-card flex items-center justify-center p-2"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-              <img
-                src="/images/altaf.jpg"
-                alt="Altaf Khan"
-                className="w-full h-full object-cover rounded-2xl"
-              />
+                <img
+                  src="/images/altaf.jpg"
+                  alt="Altaf Khan"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
 
-                
-              
+
+
               </motion.div>
-              
+
               {/* Decorative Elements */}
               <motion.div
                 className="absolute -top-4 -right-4 w-20 h-20 bg-accent/10 rounded-full"
@@ -150,16 +150,13 @@ const Hero = ({ data }) => {
       >
         <motion.button
           onClick={scrollToAbout}
-          className="p-2 text-foreground/60 hover:text-accent transition-colors duration-200"
+          className="p-3 rounded-full bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 text-white/60 hover:text-white transition-all duration-300"
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <ArrowDown className="w-6 h-6" />
         </motion.button>
       </motion.div>
-
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent pointer-events-none" />
     </section>
   );
 };
