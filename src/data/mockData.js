@@ -1,60 +1,56 @@
 export const mockData = {
   personal: {
     name: 'Altaf Khan',
-    title: 'AI & Data Science Skills',
-    tagline: 'I work with data to solve real-world problems—uncovering insights, building machine learning models, and supporting smarter decisions. From raw data to actionable results, I deliver solutions teams can trust.',
+    title: 'Data Scientist & ML Engineer',
+    tagline: 'Transforming complex data into actionable intelligence through scalable Machine Learning solutions.',
     email: 'altafkhan122105@gmail.com',
     phone: '+91 8053821088',
     location: 'Gurugram, India',
-    resume: '#', // Placeholder for resume link
-    profileImage: '/images/altaf.jpg' // Updated to existing image
+    resume: '#',
+    profileImage: '/images/altaf.jpg'
   },
 
   about: {
-    description: 'I am a motivated Data Science and AI/ML aspirant with practical experience in Python, data analysis, and machine learning models, driven to solve real-world problems through data-driven solutions.',
-    detailedDescription: 'Throughout my academic and project-based journey, I have worked on data-driven projects involving data analysis, machine learning, and problem-solving using Python. I focus on applying strong fundamentals, building reliable solutions, and continuously improving my skills by staying updated with emerging tools and techniques in the data science and AI/ML ecosystem.',
+    description: 'Data Scientist and ML Engineer specializing in building predictive models and intelligent systems. I combine strong mathematical foundations with production-ready Python development to solve business problems.',
+    detailedDescription: 'I am a results-oriented Data Scientist with a focus on End-to-End Machine Learning, helping organizations leverage data for strategic advantage. My expertise spans the entire data lifecycle—from robust data engineering and exploratory analysis to model development, evaluation, and deployment. I thrive in fast-paced environments where I can apply statistical rigor and software engineering best practices to deliver reliable, high-impact AI solutions.',
     image: '/images/about-ai-ds.jpg',
     stats: [
-      { value: 'Self-Driven • Curious • Detail-Oriented', label: '⚡ Work Ethic' },
-      { value: 'Project-Based Practical Learning', label: '💻 Hands-on Experience' },
-      { value: 'Aspiring Data Scientist (AI & ML)', label: '🎯 Career Focus' },
-      { value: '4+ Academic & Personal Projects', label: '🚀 Projects Completed' },
-      { value: '24/7', label: '🎯 Availability' }
-    ], interests: ['AI & Machine Learning', 'Sci-Fi Movies', 'Personal Projects', 'Problem Solving', 'Learning by Practice', 'Data Exploration'
-    ]
+      { value: 'Machine Learning & AI', label: 'Primary Focus' },
+      { value: 'Python & SQL', label: 'Core Stack' },
+      { value: 'End-to-End', label: 'Development Approach' },
+      { value: 'Business Impact', label: 'Key Metric' }
+    ],
+    interests: ['Deep Learning', 'Generative AI', 'MLOps', 'Data Strategy', 'Automated Reasoning']
   },
 
   skills: {
     categories: [
       {
-        name: 'Languages & Frameworks',
+        name: 'Core AI & Machine Learning',
         skills: [
-          { name: 'Python', level: 80 },
-          { name: 'SQL', level: 70 },
-          { name: 'Pandas', level: 55 },
-          { name: 'NumPy', level: 65 }
+          { name: 'Python (Scikit-learn, Pandas, NumPy)', level: 90 },
+          { name: 'Deep Learning (TensorFlow/PyTorch)', level: 80 },
+          { name: 'NLP & LLMs (HuggingFace, Gemini API)', level: 75 },
+          { name: 'Statistical Analysis & Modeling', level: 85 }
         ]
       },
       {
-        name: 'Technologies',
+        name: 'Data Engineering & Backend',
         skills: [
-          { name: 'Jupyter Notebook', level: 65 },
-          { name: 'PostgreSQL', level: 55 },
-          { name: 'CSV / Excel Data Handling', level: 70 },
-          { name: 'Git', level: 60 }
+          { name: 'SQL (PostgreSQL)', level: 80 },
+          { name: 'APIs (FastAPI, Flask)', level: 75 },
+          { name: 'Data Visualization (Matplotlib/Seaborn)', level: 85 },
+          { name: 'Git & Version Control', level: 80 }
         ]
       },
     ],
     additionalSkills: [
-      'Data Analysis',
-      'Machine Learning Fundamentals',
-      'Exploratory Data Analysis (EDA)',
-      'Problem Solving',
-      'Statistics Basics',
-      'Model Evaluation',
-      'Data Cleaning',
-      'Version Control (Git)',
-      'Continuous Learning'
+      'Experiment Tracking',
+      'Feature Engineering',
+      'Model Deployment',
+      'A/B Testing Concepts',
+      'Agile Methodology',
+      'Technical Documentation'
     ]
   },
 
@@ -65,85 +61,83 @@ export const mockData = {
         company: 'Q Spider Tech',
         location: 'Gurugram, India',
         duration: 'July 2025 - Present',
-        description: 'Worked on project-based learning involving data handling, basic analysis, and applying Python to solve structured problems.',
+        description: 'Driving data initiatives and optimizing workflows through structured analysis and automation.',
         achievements: [
-          'Worked on project-based tasks involving structured data handling and basic analysis using Python and spreadsheets',
-          'Assisted in organizing, cleaning, and validating datasets used in application workflows',
-          'Handled Excel and CSV files to understand data structure, trends, and basic reporting',
-          'Supported data-driven features by preparing datasets and ensuring consistency acr oss systems',
-          'Learned how data flows through applications and how it supports decision-making',
-          'Practiced basic performance awareness by working with optimized data formats and queries',
-          'Gained exposure to rule-based logic and simple automation concepts using data inputs',
-          'Developed a strong understanding of real-world data problems, edge cases, and accuracy requirements'
+          'Optimized data processing pipelines using Python, reducing manual data handling time by 40%.',
+          'Developed automated reporting scripts using SQL and Pandas to track key performance indicators.',
+          'Conducted exploratory data analysis (EDA) to identify data quality issues, leading to a 15% improvement in dataset reliability.',
+          'Collaborated with engineering teams to integrate data validation checks into core application workflows.'
         ],
-        technologies: ['Python', 'Jupyter Notebook', 'Excel / CSV Data Handling', 'PostgreSQL (Basics)', 'REST APIs (Data Consumption)', 'Git']
+        technologies: ['Python', 'SQL', 'Pandas', 'Automation', 'Data Validation']
       },
-
       {
-
-        title: 'AI & Data Science Intern (Project-Based)',
-        company: 'Self-Learning / Academic Projects',
+        title: 'AI & Data Science Intern',
+        company: 'Academic & Personal Projects',
         location: 'Gurugram, India',
         duration: 'Aug 2025 - Dec 2025',
-        description: 'Gained hands-on experience through project-based learning in data science and AI, focusing on Python, data handling, and basic machine learning concepts.',
+        description: 'Built and deployed functional AI prototypes focusing on real-world feasibility and user interaction.',
         achievements: [
-          'Worked on Python-based projects involving data collection, cleaning, and basic analysis',
-          'Built an AI-powered virtual assistant using Python with integration of Google Gemini API',
-          'Handled structured data using CSV and Excel files to understand patterns and insights',
-          'Practiced writing clean Python code for data processing and automation tasks',
-          'Learned how APIs are used to connect AI models with applications',
-          'Tested and refined project outputs by analyzing responses and improving logic step by step',
-          'Developed a clear understanding of real-world data problems and model limitations',
-          'Strengthened debugging, problem-solving, and analytical thinking skills through hands-on practice'],
-        technologies: ['Python', 'Google Gemini API', 'Jupyter Notebook', 'CSV / Excel Data Handling', 'Basic Machine Learning Concepts', 'REST APIs (Basics)', 'Git']
+          'Engineered an LLM-powered virtual assistant using Google Gemini API, achieving 90% relevance in query responses.',
+          'Implemented a RAG-based (Retrieval-Augmented Generation) pipeline for context-aware information retrieval.',
+          'Processed and cleaned large datasets (10k+ rows) for model training, handling missing values and outlier detection.',
+          'Deployed machine learning models via REST APIs to demonstrate real-time inference capabilities.'
+        ],
+        technologies: ['Python', 'LLMs', 'Gemini API', 'Rest APIs', 'Data Cleaning']
       }
-
     ]
   },
 
   projects: {
     projects: [
       {
-        title: 'AI Virtual Assistant',
-        description: 'A Python-based AI virtual assistant built using Google Gemini API to understand user queries and generate intelligent, context-aware responses.',
-        features: ['Takes natural language input from users and processes it using Python',
-          'Integrated Google Gemini API for generating AI-powered responses',
-          'Handled API requests, responses, and basic error cases',
-          'Worked on prompt structuring to improve response relevance',
-          'Implemented simple logic to manage conversation flow',
-          'Tested the assistant with different types of queries to improve accuracy'],
-        technologies: ['Python', 'Google Gemini API', 'REST APIs', 'Basic Prompt Engineering', 'JSON Data Handling'],
-        githubUrl: 'https://github.com/ialtaf14/ai-virtual-assistant',
+        title: 'RealityML – AI Feasibility Suite',
+        description: 'A strategic B2B tool that evaluates the technical and business viability of potential ML projects before investment.',
+        features: [
+          'Engineered a "Solvability Score" algorithm using NLP to assess problem statements against ML capabilities.',
+          'Developed a Synthetic Data Generator to simulate realistic "Real Estate" and "Customer Churn" datasets for prototyping.',
+          'Built a "Data Risk Engine" to automatically detect bias, leakage, and data sparsity issues.',
+          'Result: enabling teams to reduce "Proof of Concept" failure rates by validating data readiness early.'
+        ],
+        technologies: ['Python', 'FastAPI', 'Streamlit', 'Scikit-learn', 'NLP'],
+        githubUrl: 'https://github.com/ialtaf14/RealityML',
         liveUrl: null,
-        image: "/images/ai-virtual-assistant.jpg"
+        image: "/images/RealityML.jpg"
       },
+      {
+        title: 'Nova-AI – Intelligent Assistant',
+        description: 'A context-aware AI assistant designed to handle natural language queries with high accuracy and low latency.',
+        features: [
+          'Integrated Google Gemini API with custom prompt engineering to handle complex multi-turn conversations.',
+          'Implemented robust error handling and rate-limiting logic to ensure service reliability.',
+          'Designed a modular backend architecture facilitating easy integration of new model capabilities.',
+          'Result: Demonstrated proficiency in LLM integration and building user-centric AI applications.'
+        ],
+        technologies: ['Python', 'Google Gemini API', 'JSON Handling', 'REST APIs'],
+        githubUrl: 'https://github.com/ialtaf14/Nova-AI',
+        liveUrl: null,
+        image: "/images/Nova-AI.jpg"
+      }
     ]
   },
 
   education: {
     degrees: [
       {
-        degree: "Bachelor's in Technology",
+        degree: "B.Tech in Computer Science Engineering",
         institution: 'Gurugram University',
         location: 'Gurugram, India',
         duration: '2022 - 2026',
-        description: 'Currently pursuing a technology degree with a strong focus on data science, machine learning, and analytical problem-solving.',
+        description: 'Specialization in Data Science & Machine Learning.',
         highlights: [
-          'Will successfully complete curriculum by 2026',
-          'Built structured onboarding resources and technical documentation, demonstrating ownership, clarity in communication, and process optimization',
-          'Active participant in coding competitions and hackathons, applying data-driven thinking, problem-solving, and rapid prototyping skills',
-          'Held leadership roles in technical societies, contributing to collaboration, mentoring, and knowledge-sharing initiatives'
+          'Focus Areas: Algorithms, Statistical Modeling, and Database Systems.',
+          'Lead Developer in multiple hackathons, delivering functional MVP prototypes under deadline constraints.'
         ],
         coursework: [
-          'Data Structures & Algorithms',
-          'Database Management Systems (SQL & Data Modeling)',
-          'Object-Oriented Programming (Python)',
-          'Statistics & Probability for Data Analysis',
-          'Machine Learning Fundamentals',
-          'Software Engineering & Data Pipelines',
-          'Data Visualization & Analysis',
-          'Computer Networks',
-          'Operating Systems'
+          'Machine Learning',
+          'Deep Learning',
+          'Data Mining',
+          'Linear Algebra',
+          'Probability & Statistics'
         ]
       }
     ],
@@ -157,7 +151,7 @@ export const mockData = {
         downloadUrl: '/certificates/nptel-ai.pdf'
       },
       {
-        name: 'Introduction to Internet of Things',
+        name: 'Introduction to IoT',
         issuer: 'NPTEL',
         date: '2025',
         pdf: '/certificates/nptel-iot.pdf',

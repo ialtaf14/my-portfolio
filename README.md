@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 👨‍💻 Altaf Khan — Data Science & AI/ML Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains my personal portfolio website, created to present my profile as a **Computer Science Engineering student** focused on **Data Science, Machine Learning, and AI-driven problem solving**, targeting **internships and entry-level roles**.
 
-## Available Scripts
+🌐 **Live Portfolio:**  
+https://695bea326eee90000842c9c6--ialtaf14.netlify.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎯 Professional Summary
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I’m **Altaf Khan**, a B.Tech CSE student with a strong interest in **Data Science and Artificial Intelligence**.  
+I focus on understanding data, extracting insights, and building predictive thinking using machine learning concepts. I’m actively preparing for **Data Science / AI/ML internships and fresher roles**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This portfolio is designed for:
+- 📊 **Data Science roles**
+- 🤖 **AI / Machine Learning roles**
+- 🎓 **Internships & Entry-level opportunities**
+- 🧑‍💼 **Recruiters & Hiring Managers**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧠 Core Skills & Interests
 
-### `npm run build`
+- **Programming:** Python  
+- **Data Science:** Data analysis, data preprocessing, feature understanding  
+- **Machine Learning:** Supervised & unsupervised learning fundamentals  
+- **Analytics Mindset:** Problem framing, metrics thinking, model evaluation basics  
+- **Computer Science:** Logic building, problem solving  
+- **Interests:** Data Science, AI/ML, Predictive Modeling, Cybersecurity  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tools & Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Python  
+- NumPy, Pandas (data handling)  
+- Machine Learning concepts  
+- Netlify (portfolio deployment)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👀 Why This Portfolio (For Recruiters)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clear focus on **Data Science & AI/ML career path**  
+- Strong learning mindset with technical foundation  
+- Suitable for **internships, traineeships, and junior roles**  
+- Built to reflect analytical thinking, not just visuals  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📬 Connect With Me
 
-## Learn More
+- **Instagram:** https://www.instagram.com/ialtaf.14  
+- **LinkedIn:** https://www.linkedin.com/in/ialtaf14  
+- **GitHub:** https://github.com/your-username  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ If this portfolio aligns with your requirements, feel free to star the repository.

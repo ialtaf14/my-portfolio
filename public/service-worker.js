@@ -8,8 +8,9 @@ const urlsToCache = [
     '/logo512.png',
     '/images/altaf.jpg',
     '/images/about-ai-ds.jpg',
-    '/images/ai-virtual-assistant.jpg',
-    '/images/fallback.jpg'
+    '/images/Nova-AI.jpg',
+    '/images/RealityML.jpg',
+    '/images/fallback.jpg',
 ];
 
 self.addEventListener('install', event => {

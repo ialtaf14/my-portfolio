@@ -16,6 +16,31 @@
 
 
   :root {
+    /* Light Mode Variables */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode Variables */
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
     --card: 222 47% 11%;
@@ -35,15 +60,19 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --radius: 1rem;
   }
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "Roboto", sans-serif;
-  /* Deep Blue/Purple iOS 17 style mesh gradient (Refined Dark Mode) */
-  background-color: #020617;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Gradient Background */
+.dark body {
   background-image:
     radial-gradient(at 0% 0%, hsla(253, 30%, 15%, 1) 0, transparent 50%),
     radial-gradient(at 50% 0%, hsla(225, 40%, 20%, 1) 0, transparent 50%),
@@ -53,21 +82,12 @@ body {
   background-attachment: fixed;
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
-  color: rgba(255, 255, 255, 0.9);
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+/* Light Mode Background - Subtle & Professional */
+body:not(.dark) {
+  background-image: none;
+  background-color: hsl(var(--background));
 }
 
 @keyframes shimmer {
